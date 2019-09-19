@@ -66,7 +66,7 @@ ThreadTree NextNode(ThreadTree p)
 	return p;
 }
 
-void InOrder(ThreadNode* T)//asd
+void InOrder(ThreadNode* T)
 /*ÖÐÐò±éÀúËã·¨*/
 {
 	for (ThreadNode* p = FirstNode(T); p != NULL; p = NextNode(p))

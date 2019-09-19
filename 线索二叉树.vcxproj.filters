@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ThreadBinaryTree.h">
+    <ClInclude Include="ThreadedBinaryTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
