@@ -23,5 +23,8 @@
     <ClInclude Include="ThreadedBinaryTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="TestFunction.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
