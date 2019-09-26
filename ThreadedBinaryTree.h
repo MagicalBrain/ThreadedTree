@@ -72,3 +72,5 @@ void InOrder(ThreadNode* T)
 	for (ThreadNode* p = FirstNode(T); p != NULL; p = NextNode(p))
 		//visit(p);·ÃÎÊ²Ù×÷º¯Êý
 }
+
+//addd
