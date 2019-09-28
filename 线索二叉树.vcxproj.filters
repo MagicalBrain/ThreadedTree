@@ -26,5 +26,8 @@
     <ClInclude Include="TestFunction.h">
       <Filter>资源文件</Filter>
     </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

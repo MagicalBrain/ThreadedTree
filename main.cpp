@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
-	TestThreadTree();
+	//TestThreadTree();
+	Testfunc18();
 	return 0;
 }

@@ -3,6 +3,7 @@
 #include <fstream>
 #include "ThreadedBinaryTree.h"
 #include <string.h>
+#include "Function.h"
 
 using namespace std;
 
@@ -63,10 +64,38 @@ void TestThreadTree()
 	//char* def = "WRKG##L###YX###";
 	int i = 0, num = 0;
 	
-	ElemType x = 'Y';
+	//ElemType x = 'Y';
+
+	//构造一个二叉树
+	p = CreatThTree(def, i);
+	
+	fprint_tree(p);
+	CreateInThread(p);
+}
+
+void Testfunc18()
+{
+	ThreadTree p;
+	InitThTree(p);
+	//char* def = "MJG####";
+	//char* def = "A#B#CD###";
+	char* def = "ABD##E##C##";
+	//char* def = "CG#J#T#V###";
+	//char* def = "C#GJTV#####";
+	//char* def = "WRKG##L###YX###";
+	int i = 0, num = 0;
+	ElemType x;
 
 	//构造一个二叉树
 	p = CreatThTree(def, i);
 
 	fprint_tree(p);
+	//对二叉树进行中序线索化
+	CreateInThread(p);
+	cout << def << endl;;
+	cout << "输入要查找的结点的后序前驱：" << endl;
+	cin >> x;
+	if (!func18(p, x))
+		cout << "查找失败！" << endl;
+	InOrder(p);
 }

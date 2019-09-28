@@ -16,7 +16,7 @@ typedef struct ThreadNode
 void InThread(ThreadTree& p, ThreadTree& pre)
 /*中序遍历对二叉树线索化的递归算法*/
 {
-	if (p == NULL)
+	if (p != NULL)
 	{
 		InThread(p->lchild, pre);
 		if (p->lchild == NULL)
@@ -26,10 +26,10 @@ void InThread(ThreadTree& p, ThreadTree& pre)
 		}
 
 		//InThread(p->rchild, pre);
-		if (pre != NULL && pre->lchild == NULL)
+		if (pre != NULL && pre->rchild == NULL)
 		{
-			p->rchild = pre;
-			p->rtag = 1;
+			pre->rchild = p;
+			pre->rtag = 1;
 		}
 		pre = p;
 		InThread(p->rchild, pre);
@@ -43,7 +43,7 @@ void CreateInThread(ThreadTree& T)
 {
 	ThreadTree pre = NULL;
 	if (T != NULL)
-		//非空才进行线索化
+	//非空才进行线索化
 	{
 		InThread(T, pre);	//	递归线索化
 		pre->rchild = NULL;	//处理遍历的最后一结点
@@ -67,7 +67,7 @@ ThreadTree NextNode(ThreadTree p)
 		return FirstNode(p->rchild);
 	else
 		return p->rchild;
-	return p;
+//	return p;
 }
 
 void InOrder(ThreadNode* T)

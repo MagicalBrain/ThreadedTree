@@ -126,6 +126,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Function.h" />
     <ClInclude Include="TestFunction.h" />
     <ClInclude Include="ThreadedBinaryTree.h" />
   </ItemGroup>
